@@ -308,7 +308,7 @@
 //     return 0;
 // }
 
-// // extreme points in an arrray- odd sized array
+// // extreme points in an ar  ray- odd sized array
 // // here code repeates the middle element 
 
 // #include<iostream>
@@ -336,3 +336,282 @@
 //     RevArr(arr, size);
 //     return 0;
 // } 
+
+// take two
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+
+//     // int arr[5]={0,1,2,3,4};
+
+//     // // cout << " address is..." << &arr << endl;
+//     // // cout << " address is..." << arr << endl;
+//     // // cout << "size of arr..." << sizeof(arr) << endl;
+
+//     // int n = 5;
+//     // for(int i = 0; i<n; i++){
+//     //     cout << arr[i] << "  ";
+//     // }
+
+//     // taking i/p from array 
+//     int arr[5];
+//     int n = 5;
+//     for(int i = 0; i < n; i++){
+//         cout << " Enter Values for the index number " << i << ":  ";
+//         cin >> arr[i];
+//         cout << endl;
+//     }
+
+//     // printing that array
+
+//     cout << "heres the array received as i/p" << endl;
+//     for(int i =0; i < n; i++){
+//         cout << arr[i] << " ";
+//     } 
+
+// }
+
+// // PS- 1
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[10];
+//     int n = 10;
+
+// taking input
+
+//     for(int i = 0; i < n; i++){
+//         cout << " Enter Values for the index number " << i << ":  ";
+//         cin >> arr[i];
+//         cout << endl;
+//     }
+    
+// doubling up 
+
+//     for(int i = 0; i < n; i++){
+//         //cout << " Enter Values for the index number " << i << ": "<< 2*arr[i] << endl;
+//         arr[i] = 2* arr[i];
+//         cout << " Enter Values for the index number " << i << ": "<< arr[i] << endl;
+//     }
+//     //cout << "doubled array elements are.." << arr[i] << " "; // // throwing error as here i is out of scope
+// }
+
+// PS- 2
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+    
+//     int arr[5];
+//     int n = 5;
+
+//     // taking i/p
+
+//     for(int i = 0; i <n; i++){
+//         cout << "input numbers at index " << i << ": ";
+//         cin >> arr[i];
+//     }
+
+//     // sum printing (my mistake)
+
+//     // for(int i = 0; i < n; i++){
+//     //     int sum = 0;
+//     //     sum = sum + arr[i];
+//     //     cout << "the sum of all elements in the array is: " << sum << " ";
+//     // }
+
+//     // sum printing
+
+//     int sum = 0;
+//     for(int i = 0; i < n; i++){
+//         sum = sum + arr[i];
+//     }
+//     cout << "the sum of all elements in the array is: " << sum << " ";
+// }
+
+// // linear search in array
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+
+//     int arr[4] = {1,2,3,5};
+//     int n = 4;
+//     int target = 5;
+//     bool flag = 0;
+//     for(int i = 0; i < n; i++){
+//         if(arr[i] == target){
+//             flag = 1;
+//             break;
+//         }
+//     }
+
+//     if(flag == 1){
+//         cout << " target is here..." <<  endl;
+//     }
+//     else{
+//         cout << "target is not here..." << endl;
+//     }
+// } 
+
+// // linear search in array- using functions
+
+// #include<iostream>
+// using namespace std;
+
+// bool LinearSearch(int arr[], int size, int target){
+//     for(int i = 0; i < size; i++){
+//         if(arr[i] == target){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int size = 5;
+//     int target = 3;
+//     int ans = LinearSearch(arr, size, target);
+
+// // hamko bhi pata chale ki target mil gaya hai isiliyee yeh line of code
+//     if(ans == 1){
+//         cout << " target found" << endl;
+//     }
+//     else{
+//         cout << "target not found" << endl;
+//     }
+// }
+
+// // count 0's and 1's in array
+
+// #include<iostream>
+// using namespace std;
+
+// void CountNumber(int arr[], int size){
+
+//     int zerocount = 0;
+//     int onecount = 0;
+//     for(int i = 0; i < size; i++){
+//         if(arr[i] == 0){
+//             zerocount++;
+//         }
+//          if(arr[i] == 0){
+//             onecount++; 
+//         }
+//     }
+//     cout << "zero count is..." << zerocount << endl;
+//     cout << "one count is..." << onecount << endl;
+// }
+// int main(){
+//     int arr[]={1,0,0,1,0,1,1,0,0,0,1,1};
+//     int size = 12;
+//     CountNumber(arr, size);
+// }
+
+// // Minimum number in array 
+
+// #include<iostream>
+// #include<limits.h>
+// using namespace std;
+
+// int MinimumAnswer(int arr[], int size){
+//         int minAns = INT_MAX;
+         
+//         //M-1
+//         for(int i = 0; i < size; i++){
+//             if(arr[i] < minAns){
+//                 minAns = arr[i];
+//             }
+//         }
+
+//         // //M-2
+//         // for(int i = 0; i < size; i++){
+//         //     minAns = min(arr[i], minAns);
+//         // }
+
+//         return minAns;
+//     }
+
+// int main(){
+    
+//     int arr[] = {9,6,11,17,54,2};
+//     int size = 6;
+//     int minimum = MinimumAnswer(arr, size); // answer ko int me store karvaliya kyuki jo function banaya hai voh integer return type ka hai..(integer return karta hai)
+//     cout << " the minimum in this array is... " << minimum << endl;  
+// }
+
+// reverse an array- even and odd sized (refer above code)
+
+// // extreme points in array- even size array
+
+// // #include<iostream>
+// // using namespace std;
+
+// // void extArr(int arr, int size){
+// //   int left = 0;
+// //   int right = size - 1;
+  
+// //   while(left<=right){
+// //     cout << arr[left] << endl;
+// //     cout << arr[right] << endl;
+// //     left++;
+// //     right--;
+// //   }
+
+// // }
+// // int main(){
+// //     int arr[6] = {1,3,5,7,9,11};
+// //     int size = 6;
+// //     extArr(arr, size);   
+// // }
+
+// #include<iostream>
+// using namespace std;
+
+// void extArr(int arr[], int size){
+//   int left = 0;
+//   int right = size - 1;
+  
+//   while(left<=right){
+//     cout << arr[left] << endl;
+//     cout << arr[right] << endl;
+//     left++;
+//     right--;
+//   }
+
+// }
+// int main(){
+//     int arr[6] = {1,3,5,7,9,11};
+//     int size = 6;
+//     extArr(arr, size);   
+// }
+
+// // extreme points in array- odd size array
+
+// #include<iostream>
+// using namespace std;
+
+// void extArr(int arr[], int size){
+//     int left = 0;
+//     int right = size-1;
+
+//     while(left<=right){
+//         if(left == right){
+//             cout << arr[left] << endl;
+//         }
+//         else{
+//             cout << arr[left] << endl;
+//             cout << arr[right] << endl;
+//         }
+//         left++;
+//         right--;
+//     }
+// }
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int size = 5;
+//     extArr(arr, size);
+// }
+

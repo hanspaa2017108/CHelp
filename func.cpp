@@ -450,3 +450,140 @@
 //     cout << "Final Number from digit is..." << num;
 //     return 0;
 // }
+
+// //FUNC-PRC1
+
+// #include<iostream>
+// using namespace std;
+
+// void PrintNames(string Name){
+//         for(int i = 0; i < 5; i++){
+//             cout << Name << endl;
+//         }
+//     }
+// int main(){
+//     PrintNames("Aman");
+//     PrintNames("Arjun");
+//     PrintNames("Hanji?");
+//     return 0;
+// }
+
+// //func-prc2
+
+// #include<iostream>
+// using namespace std;
+
+// void PrintThis(){
+//     cout << "FIRST GOES THIS" << endl;
+//     return;
+//     cout << "SECOND GOES THIS" << endl;
+// }
+// int main(){
+//     PrintThis();
+//     return 0;
+// }
+
+// // func- prc3
+
+// #include<iostream>
+// using namespace std;
+
+// // function declare
+// int MathFunc(int a, int b, int c);
+
+// // function call
+// int main(){
+//     int final_ans = MathFunc(4,4,4);
+//     return final_ans;
+// }
+
+// // function define
+// int MathFunc(int a, int b, int c){
+//     int ans = a*b*c;
+//     cout << "the answer is..." << ans << endl;
+//     return ans;
+// }
+
+// // function prc-4, failed to debug properly between min1 and b, gpt helped
+
+// #include<iostream>
+// using namespace std;
+
+// int MinFunc(int a, int b, int c){
+//         int Min1 = min(a, b);
+//         int Min2 = min(Min1, c);
+//         cout << "The Minimun is..." << Min2 << endl;
+//         return Min2;
+//     }
+// int main(){
+//     int FinalMin = MinFunc(60, 61, 59);
+//     return 0;  
+// }
+
+// // return min of three num
+// #include<iostream>
+// using namespace std;
+// int maxThree(int num1, int num2, int num3){
+//     int Three = min(num1, num2);
+//     int ansThree = min(Three, num3);
+//     cout << "max of three numbers is- " << ansThree << endl;
+//     return ansThree;
+// }
+// int main(){
+//     int finalmax = maxThree(60, 61, 59);
+//     return 0;
+// }
+
+// // func prc-5
+// #include<iostream>
+// using namespace std;
+
+// void SumN(int n){
+//     int sum = 0;
+//     for(int i = 0; i <= n; i++){
+//         sum = sum + i;
+//     }
+//     cout << sum;
+// }
+// int main(){
+//     SumN(10);
+//     return 0;
+// }
+
+// // func prc-6
+// #include<iostream>
+// using namespace std;
+
+// void SumN(int n){
+//     int sum = 0;
+//     for(int i = 2; i <= n; i = i + 2){
+//         sum = sum + i;
+//     }
+//     cout << "sum of all even numbers are..."<< sum;
+// }
+// int main(){
+//     SumN(10);
+//     return 0;
+// }
+
+// // func prc-5, bakwas way to  code
+// #include<iostream>
+// using namespace std;
+
+// void SumN(int n){
+//     int sum = 0;
+//     for(int i = 0; i <= n; i++){
+//         if(i%2 == 0){
+//             sum = sum + i;
+//         }
+//     }
+//     cout << sum; 
+// }
+// int main(){
+//     SumN(10);
+//     return 0;
+// }
+
+// fuc prc-6, even odd but using BIT WISE
+
+ 

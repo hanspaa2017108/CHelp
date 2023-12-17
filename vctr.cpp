@@ -116,3 +116,55 @@
 
 //     return 0;
 // }
+
+/*
+TAKE TWO
+*/
+
+// static memory allocation
+
+// dynamic memory allocation 
+
+// vector-1 
+
+#include<iostream>
+using namespace std;
+
+void print(vector<int> first){
+    cout << "printing the vector..." << endl;
+    int size = first.size();
+    for(int i = 0; i < size; ++i){
+        cout << first[i] << " ";
+        //cout << first.at(i) << endl;
+    }
+    cout << endl;
+    }
+int main(){
+    
+    vector<int> first;
+    int n;
+    cin >> n;
+
+    for(int i = 0; i < n; ++i){
+        int d;
+        cin >> d;
+        first.push_back(d);
+    }
+    print(first);
+    
+    for(int i = 0; i < 5; ++i){
+        first.push_back(15);
+    }
+    print(first);
+    
+    //first.front();
+    //first.back();
+    first.pop_back();
+    print(first);
+
+    first.clear();
+    first.push_back(1);
+    print(first);
+}
+
+// vector- 2 
